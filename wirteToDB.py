@@ -45,13 +45,15 @@ db = pymysql.connect(host="192.168.2.100", port=3306, user="root", password="hea
 cursor = db.cursor()
 
 # 使用 execute()  方法执行 SQL 查询
-f = open('20190331')
+f = open('20190401')
 if f.name == time.strftime("%Y%m%d", time.localtime()):
     lines = f.readlines()
     sqlList = createSql(lines)
     for sql in sqlList:
         print(sql)
         cursor.execute(sql)
+else:
+    print("file name is not equals date!!!")
 
 # 关闭数据库连接
 db.close()
