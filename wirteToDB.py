@@ -17,7 +17,7 @@ def get_volume(value):
     return float(value)
 
 def createSql(lines) :
-    index = 0;
+    index = 0
     recordList = list()
     for line in lines :
         if index % 2 == 0 :
@@ -57,5 +57,3 @@ else:
 
 # 关闭数据库连接
 db.close()
-
-
