@@ -45,7 +45,7 @@ db = pymysql.connect(host="192.168.2.100", port=3306, user="root", password="hea
 cursor = db.cursor()
 
 # 使用 execute()  方法执行 SQL 查询
-f = open('./doc/20190422')
+f = open('./doc/20190423')
 if f.name == "./doc/" + time.strftime("%Y%m%d", time.localtime()):
     lines = f.readlines()
     sqlList = createSql(lines)
