@@ -45,7 +45,7 @@ db = pymysql.connect(host="192.168.2.100", port=3306, user="root", password="hea
 cursor = db.cursor()
 
 # 使用 execute()  方法执行 SQL 查询
-f = open('./doc/20190427')
+f = open('./doc/20190428')
 if f.name == "./doc/" + time.strftime("%Y%m%d", time.localtime()):
     lines = f.readlines()
     sqlList = createSql(lines)
@@ -54,6 +54,5 @@ if f.name == "./doc/" + time.strftime("%Y%m%d", time.localtime()):
         cursor.execute(sql)
 else:
     print("file name is not equals date!!!")
-
 # 关闭数据库连接
 db.close()
